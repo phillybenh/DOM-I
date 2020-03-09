@@ -52,7 +52,7 @@ const navTwo = document.querySelector('a:nth-of-type(2)');
 const navThree = document.querySelector('a:nth-of-type(3)');
 const navFour = document.querySelector('a:nth-of-type(4)');
 const navFive = document.querySelector('a:nth-of-type(5)');
-const navSix = document.querySelector('a:nth-of-type(5)');
+const navSix = document.querySelector('a:nth-of-type(6)');
 
 //CTA
 const ctaHeading = document.querySelector('h1');
@@ -60,25 +60,27 @@ const ctaBtn = document.querySelector('button');
 const ctaImg = document.querySelector('#cta-img');
 
 //Main Content
-const featHeading = document.querySelector('h4:nth-of-type(1)');
+const featHeading = document.querySelector('.top-content .text-content:first-child h4');
 // console.log(featHeading);
-const featText = document.querySelector('p:nth-of-type(1)');
+const featText = document.querySelector('.top-content .text-content:first-child p');
 // console.log(featText);
-const aboutHeading = document.querySelector('h4:nth-of-type(2)');
-const aboutText = document.querySelector('p:nth-of-type(2)');
+const aboutHeading = document.querySelector('.top-content .text-content:last-child h4');
+// console.log(aboutHeading);
+const aboutText = document.querySelector('.top-content .text-content:last-child p');
+// console.log(aboutText);
 const mainImg = document.querySelector('#middle-img');
-const servicesHeading = document.querySelector('h4:nth-of-type(3)');
-const servicesText = document.querySelector('p:nth-of-type(3)');
-const productHeading = document.querySelector('h4:nth-of-type(4)');
-const productText = document.querySelector('p:nth-of-type(4)');
-const visionHeading = document.querySelector('h4:nth-of-type(5)');
-const visionText = document.querySelector('p:nth-of-type(5)');
+const servicesHeading = document.querySelector('.bottom-content .text-content:first-child h4');
+const servicesText = document.querySelector('.bottom-content .text-content:first-child p');
+const productHeading = document.querySelector('.bottom-content .text-content:nth-child(2) h4');
+const productText = document.querySelector('.bottom-content .text-content:nth-child(2) p');
+const visionHeading = document.querySelector('.bottom-content .text-content:last-child h4');
+const visionText = document.querySelector('.bottom-content .text-content:last-child p');
 
 //Contact
 const contactHeading = document.querySelector('.contact h4');
-const contactAddress = document.querySelector('.contact:nth-child(2)');
-const contactPhone = document.querySelector('.contact:nth-child(3)');
-const contactEmail = document.querySelector('.contact:nth-child(4)');
+const contactAddress = document.querySelector('.contact p:nth-of-type(1)');
+const contactPhone = document.querySelector('.contact p:nth-of-type(2)');
+const contactEmail = document.querySelector('.contact p:nth-of-type(3)');
 
 //Footer
 const copyright = document.querySelector('footer p');
@@ -94,16 +96,51 @@ navFive.textContent = siteContent["nav"]["nav-item-5"];
 navSix.textContent = siteContent["nav"]["nav-item-6"];
 
 //CTA
+ctaHeading.textContent = siteContent["cta"]["h1"];
+ctaBtn.textContent = siteContent["cta"]["button"];
+ctaImg.src = siteContent["cta"]["img-src"];
 
 //Main Content
+featHeading.textContent = siteContent["main-content"]["features-h4"];
+featText.textContent = siteContent["main-content"]["features-content"];
+aboutHeading.textContent = siteContent["main-content"]["about-h4"];
+aboutText.textContent = siteContent["main-content"]["about-content"];
+mainImg.src = siteContent["main-content"]["middle-img-src"];
+servicesHeading.textContent = siteContent["main-content"]["services-h4"];
+servicesText.textContent = siteContent["main-content"]["services-content"];
+productHeading.textContent = siteContent["main-content"]["product-h4"];
+productText.textContent = siteContent["main-content"]["product-content"];
+visionHeading.textContent = siteContent["main-content"]["vision-h4"];
+visionText.textContent = siteContent["main-content"]["vision-content"];
 
 //Contact
+contactHeading.textContent = siteContent["contact"]["contact-h4"];
+contactAddress.textContent = siteContent["contact"]["address"];
+contactPhone.textContent = siteContent["contact"]["phone"];
+contactEmail.textContent = siteContent["contact"]["email"];
 
 //Footer
+copyright.textContent = siteContent["footer"]["copyright"];
 
 //## Task 3: Add new content
 //* Change the color of the navigation text to be green.
+const navText = document.querySelectorAll('nav a');
+console.log(navText);
+navText.forEach(item => {
+  item.style.color = 'green';
+});
+
 //* Utilize`.appendChild()` and`.prepend()` to add two new items to the navigation system.You can call them whatever you want.
+
+// const navElement = document.querySelector('nav'); don't really need this
+
+const firstItem = document.createElement('a');
+firstItem.textContent = "First Thing";
+document.querySelector('nav').prepend(firstItem);
+
+const lastItem = document.createElement('a');
+lastItem.textContent = "Last Thing";
+document.querySelector('nav').append(lastItem);
 
 // ## Stretch Goals
 //   * [] Update styles throughout the page as you see fit.Study what happens when you updated the DOM using style in JavaScript.  
