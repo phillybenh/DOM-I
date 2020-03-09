@@ -9,7 +9,7 @@
 * What the DOM is not
     * Javascript
     * HTML or CSS
-* Static
+    * Static
 
 * What the DOM is
     * Language neutral API
@@ -38,7 +38,7 @@
     * ```const introText = document.querySelector('#intro-text');```  
     * ```introText.textContent = 'stuff and things';``` //would change the content of introText to 'stuff and things'
 
-* Manipulating an image w/ JavaScriptthe ```.setAttributes```
+* Manipulating an image w/ JavaScriptthe ```.setAttribute()```
     * ```cont catImg = document.querySelector('img');``` // sets catImg equal to an <img>
     * ```catimg.setAttribute('src', 'https://blahblahblah.com/blah)``` // changes the image to a different one, buy displaying it through the DOM (but not actually changing the <img> src in the HTML)
     
@@ -76,6 +76,11 @@
     * ```newCat/style.marginRight = '20px';```
     * ```newCat.alt = 'Another Cat';```
     * ```section.prepend = newCat;``` // adds the newCat to the begining of the children
+
+* ```.children``` and ```.parentNode```
+    * These properties are used for accessing relatives of the element.
+    * ```.children``` returns an HTMLCollection of all the children of that element.
+    * ```.parentNode``` returns the parent element of that element.
 
 
 
