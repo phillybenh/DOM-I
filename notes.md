@@ -17,6 +17,8 @@
     *  Dynamic
 
 * Nodes and Types
+    * Everythign we can change is a node (elements, text, attributes)
+ 
 ![graphic depicting nodes and types of DOM](dom-tree.jpg)
 
 * In the console
@@ -83,7 +85,9 @@
     * ```.parentNode``` returns the parent element of that element.
 
 
+[Guided project from lecture](https://codepen.io/phillybenh/pen/YzXYVZm?editors=0010)
 
+[Instructor Notes](https://www.notion.so/DOM-I-1b94ceb018824682a4eb01f646201be3)
     
 
 
