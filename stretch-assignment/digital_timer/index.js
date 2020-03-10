@@ -1,9 +1,3 @@
-/////////////////////////////
-//The resource from “http://127.0.0.1:5500/DOM-I/stretch-assignment/digital_timer/DOM-I/stretch-assignment/digital_timer/index.js” was blocked due to MIME type (“text/html”) mismatch (X-Content-Type-Options: nosniff).
-//////////////////////////////
-
-
-
 
 /*
   window.setTimeout(function, milliseconds); //Executes a function, after waiting a specified number of milliseconds.
@@ -20,27 +14,28 @@ const msHundreds = document.querySelector('#msHundreds');
 const secOnes = document.querySelector('#secondOnes');
 const secTens = document.querySelector('#secondTens');
 
+
 // Let's make a timer?
-const seconds = 0;
+const time = 0; //in 10ms increments
 
 function timer() {
-    for (let i = 0; i <= 10000; i++)
-        if (i < 100) {
-            let msT = i / 10;
-            msTens.textContent = msT;
+    // for (let i = 0; i <= 10000; i++) this doesn't make sense with setInterval
+        if (time < 10) {
+            
+            msTens.textContent = time.toString();
             return msTens;
         }
-        else if (i < 1000) {
+        else if (time < 100) {
             //msH
         }
-        else if (i < 10000) {
+        else if (time < 1000) {
             //secO
         }
         else {
             document.querySelector(digits).forEach(item => {
                 item.style.color = 'red';
             })
-        }
+         }
 }
 
 window.setInterval(timer, 10) //calls timer and repeats every 10 ms
