@@ -15,7 +15,7 @@ Topics:
  * Choose selectors for a given problem
  * Work with the object the different selectors return
 
-## Beginning Project
+## [x] Beginning Project
  * You'll be working in the `digital_timer` directory
  * Add your script tag into you index.html
  * You can open your `index.html` file in your browser to see your work, but you may also work in codepen.io first if you'd like
